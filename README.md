@@ -1,1 +1,0 @@
-# bjm-wordpress-theme
