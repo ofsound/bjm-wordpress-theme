@@ -1,0 +1,238 @@
+/*
+    ben montgomery
+    bjm2017
+    style_bjm.scss
+    since october 2017
+    loads after the unchanged style.css of the underscores.me theme
+*/
+
+/* SCSS VARIABLES */
+
+$mobile: 'only screen and (max-width: 600px)';
+
+/* SITE STYLES */
+
+body {
+  font-size: 14px;
+  color: #555;
+  background-color: #FFFFFF;
+  @media #{$mobile} {
+    font-size: 17px;
+    border-top: 0;
+    border-bottom: 0;
+    background-color: #FFFFFF;
+    background-image: none;
+  }
+  #page {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    @media #{$mobile} {
+      width: 100%;
+      min-width: 320px;
+    }
+    #content {
+      @media #{$mobile} {
+        padding-top: 60px;
+      }
+    }
+  }
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  clear: both;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.entry-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 20px;
+    color: #000000;
+  }
+  h6 {
+    font-size: 20px;
+    color: #868686;
+  }
+  ul {
+    clear: none;
+    overflow: hidden;
+    margin-top: -11px;
+    padding-left: 21px;
+    li {
+      position: relative;
+      list-style-type: none;
+      &:before {
+        position: absolute;
+        top: 3px;
+        left: -20px;
+        width: 10px;
+        height: 10px;
+        content: '';
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        background-color: #000;
+        @media #{$mobile} {
+          top: 5px;
+        }
+      }
+    }
+  }
+}
+
+/* HEADER */
+
+header#masthead {
+  max-width: 1000px;
+  height: 100px;
+  @media #{$mobile} {
+    font-size: 16px;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 60px;
+  }
+  .main-navigation {
+    background-color: #FFFFFF;
+    @media #{$mobile} {
+      width: 100%;
+    }
+    .menu-primary-container {
+      @media #{$mobile} {
+        display: none;
+      }
+      ul {
+        padding-right: 35px;
+        text-align: right;
+        li {
+          &.current-menu-item {
+            color: #666;
+          }
+          font-size: 17px;
+          font-weight: bold;
+          line-height: 100px;
+          display: inline-block;
+          float: none;
+          height: 100px;
+          padding: 0 11px 0 7px;
+          text-transform: uppercase;
+          font-size: 14px;
+          color: #CCC;
+          a {
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+    .menu-mobile-container {
+      display: none;
+      @media #{$mobile} {
+        display: block;
+        margin-top: 60px;
+        ul {
+          text-align: center;
+          -webkit-box-shadow: 0 16px 12px -12px rgba(0, 0, 0, .5);
+             -moz-box-shadow: 0 16px 12px -12px rgba(0, 0, 0, .5);
+                  box-shadow: 0 16px 12px -12px rgba(0, 0, 0, .5);
+          li {
+            font-size: 24px;
+            line-height: 50px;
+            float: none;
+            height: 50px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #232232;
+            background-color: #333333;
+            a {
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* MUSIC PAGE */
+
+body.page-id-8 {
+  .entry-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    > a {
+      &:hover {
+        color: #000;
+      }
+      &:first-child {
+        opacity: .5;
+      }
+      display: block;
+      max-width: 320px;
+      margin: 20px;
+      margin-bottom: 40px;
+      padding-right: 30px;
+      padding-left: 30px;
+      img {
+        display: block;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+
+/* CONTACT PAGE */
+
+body.page-id-22 {
+  .entry-content {
+    form {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 700px;
+      input, textarea {
+        padding: 5px;
+      }
+      input[type='submit'] {
+        padding: 10px 15px;
+      }
+      label {
+        line-height: 2.2em;
+      }
+    }
+  }
+}
